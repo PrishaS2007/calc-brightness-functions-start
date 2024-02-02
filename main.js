@@ -39,7 +39,7 @@ function btnClicked() {
   bInEl.value = b;
 
   // Calculate & Output Brightness
-  let brightness = Math.sqrt(0.299 * r ** 2 + 0.587 * g ** 2 + 0.114 * b ** 2);
+  let brightness = calcBrightness(r, g, b);
   brightEl.innerHTML = Math.round(brightness);
 
   // Update rgb preview: brightness > 160 -> black text, else white text
@@ -52,3 +52,10 @@ function btnClicked() {
     previewEl.style.color = "white";
   }
 }
+
+// Helper Functions
+  function calcBrightness(r, g, b) {
+    return Math.round(
+      Math.sqrt(0.299 * r ** 2 + 0.587 * g ** 2 + 0.114 * b ** 2));
+  }
+
