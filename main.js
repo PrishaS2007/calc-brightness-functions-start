@@ -12,9 +12,9 @@ document.getElementById("btn").addEventListener("click", btnClicked);
 
 function btnClicked() {
   // Get Input Values
-  let r = +rInEl.value;
-  let g = +gInEl.value;
-  let b = +bInEl.value;
+  let rIn = +rInEl.value;
+  let gIn = +gInEl.value;
+  let bIn = +bInEl.value;
 
   // Constrain Input Values - rgb values must be between 0 and 255
   if (r < 0) {
@@ -59,3 +59,4 @@ function btnClicked() {
       Math.sqrt(0.299 * r ** 2 + 0.587 * g ** 2 + 0.114 * b ** 2));
   }
 
+  
